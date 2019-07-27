@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginRegister.PhoneLogin">
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/inputs"
+        android:drawableStart="@drawable/phone"
+        android:ems="10"
+        android:hint="Enter phone number"
+        android:inputType="phone"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/verify_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/inputs"
+        android:drawableStart="@drawable/password"
+        android:ems="10"
+        android:hint="Enter Code"
+        android:inputType="phone"
+        android:padding="5dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/phone_number"
+        app:layout_constraintStart_toStartOf="@+id/phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number" />
+
+    <Button
+        android:id="@+id/verify_code_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/buttons"
+        android:padding="4dp"
+        android:text="Send Verification Code"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verify_code" />
+
+    <Button
+        android:id="@+id/verify"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/buttons"
+        android:padding="4dp"
+        android:text="Verify"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/verify_code_btn"
+        app:layout_constraintStart_toStartOf="@+id/verify_code_btn"
+        app:layout_constraintTop_toBottomOf="@+id/verify_code_btn" />
+</android.support.constraint.ConstraintLayout>

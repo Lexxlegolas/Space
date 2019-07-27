@@ -5,6 +5,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.example.space.fragments.ChatsFragment;
+import com.example.space.fragments.ContactsFragment;
+import com.example.space.fragments.GroupsFragment;
+
 public class TabsAccesorAdapter extends FragmentPagerAdapter
 {
 

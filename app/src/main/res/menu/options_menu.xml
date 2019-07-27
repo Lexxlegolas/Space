@@ -7,11 +7,19 @@
         android:title="Find Friends"
         app:showAsAction="never">
     </item>
+
+    <item
+        android:id="@+id/create_group"
+        android:title="Create Group"
+        app:showAsAction="never">
+    </item>
+
     <item
         android:id="@+id/settings"
         android:title="Settings"
         app:showAsAction="never">
     </item>
+
     <item
         android:id="@+id/logout"
         android:title="Logout"
