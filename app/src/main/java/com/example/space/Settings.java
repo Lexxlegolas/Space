@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -47,6 +48,7 @@ public class Settings extends AppCompatActivity
     private StorageReference usersProfileImage;
     private String checker = "";
     private StorageTask uploadTask;
+    private Toolbar toolbar;
 
     private static final int GallaryPick = 1;
 
@@ -97,6 +99,12 @@ public class Settings extends AppCompatActivity
 
     private void initializeFields()
     {
+        toolbar = findViewById(R.id.settings_tool_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setTitle("Settings");
+
         update = findViewById(R.id.update_settings);
 
         username = findViewById(R.id.name_settings);
@@ -129,12 +137,12 @@ public class Settings extends AppCompatActivity
     {
         String setName = username.getText().toString();
         String setStatus = status.getText().toString();
-            HashMap<String, String> profileMap = new HashMap<>();
+            HashMap<String, Object> profileMap = new HashMap<>();
             profileMap.put("uid",currentUserId);
             profileMap.put("name",setName);
             profileMap.put("status",setStatus);
 
-            rootRef.child("Users").child(currentUserId).setValue(profileMap)
+            rootRef.child("Users").child(currentUserId).updateChildren(profileMap)
                     .addOnCompleteListener(new OnCompleteListener<Void>()
                     {
                         @Override
