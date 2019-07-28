@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ContactsFragment">
+    tools:context=".fragments.RequestFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/contacts_recycler"
+        android:id="@+id/request_recycler"
         android:layout_width="395dp"
         android:layout_height="715dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
